@@ -20,6 +20,13 @@ import tripadvisor from "./assets/logoCompany/tripadvisor.svg";
 import guide from "./assets/iconService/guide.png";
 import bookingservice from "./assets/iconService/booking.png";
 import weather from "./assets/iconService/weather.png";
+// icon & png top destination
+import previous from "./assets/iconTopDestination/previous.svg";
+import next from "./assets/iconTopDestination/next.svg";
+import star from "./assets/iconTopDestination/star.svg";
+import rome from "./assets/pngTopDestination/rome.png";
+import maldives from "./assets/pngTopDestination/maldives.png";
+import uae from "./assets/pngTopDestination/uae.png";
 
 export const App = () => {
   const [dataToggle, setDataToggle] = useState(false);
@@ -109,7 +116,7 @@ export const App = () => {
 
       {/* Hero section */}
       <section>
-        <div className="container mx-auto py-4 px-4 lg:px-8">
+        <div className="container mx-auto py-4 px-4 lg:px-8 lg:py-16 ">
           <div className="grid grid-cols-12 items-center">
             <div className="col-span-12 lg:col-span-4 order-2 lg:order1">
               <div>
@@ -160,7 +167,7 @@ export const App = () => {
 
       {/* Sercive section */}
       <section>
-        <div className="container mx-auto py-4 px-4 lg:px-8 lg:py-16 overflow-x-hidden">
+        <div className="container mx-auto py-4 px-4 lg:px-8 lg:py-16 overflow-x-hidden ">
           <div className="grid grid-cols-12 items-center px-2">
             <div className="lg:col-span-4 col-span-12 flex flex-col gap-4 lg:pr-2">
               <span className="text-pink-0 font-bold leading-tight text-center lg:text-start text-base sm:text-2xl">SERVICES</span>
@@ -192,6 +199,78 @@ export const App = () => {
                 <div className="flex flex-col sm:gap-8 gap-2">
                   <h2 className="text-grey-0 font-bold text-lg text-center">Weather Forecast</h2>
                   <p className="font-inter text-lg leading-relaxed text-grey-0 opacity-50 text-center">What looked like a small patch of purple grass, above five feet.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Top Destination section */}
+      <section>
+        <div className="container mx-auto py-4 px-4 lg:px-8 lg:py-16 sm:pt-8">
+          <div className="grid grid-cols-12 px-2">
+            <div className="col-span-12 flex flex-col gap-4 lg:flex-row lg:justify-between">
+              <div className="flex flex-col gap-4">
+                <span className="text-pink-0 font-bold text-center leading-tight lg:text-start lg:text-2xl">Top Destination</span>
+                <h1 className="text-grey-0 font-bold text-3xl text-center leading-tight sm:text-[40px] lg:text-start lg:text-5xl">Explore top destination</h1>
+              </div>
+              <div className="flex justify-between sm:justify-center sm:gap-8">
+                <button className="border rounded-full p-6 lg:p-9">
+                  <img src={previous} alt="" className="lg:w-6" />
+                </button>
+                <button className="border rounded-full p-6 bg-ungu-0 lg:p-9">
+                  <img src={next} alt="" className="lg:w-6" />
+                </button>
+              </div>
+            </div>
+            <div className="col-span-12 sm:mt-16 mt-8 lg:mt-16 flex flex-col gap-8 sm:flex-row sm:w-auto">
+              <div className="sm:w-1/3">
+                <div className="w-full">
+                  <img src={rome} alt="" className="w-full" />
+                </div>
+                <div className="p-8 flex flex-col gap-2 rounded-b-3xl bg-white drop-shadow-xl">
+                  <div className="lg:flex">
+                    <span className="text-pink-0 font-bold text-2xl lg:order-2 lg:w-2/3 lg:text-end">$550.16</span>
+                    <h2 className="text-grey-0 font-bold text-2xl lg:order-1">Paradise Beach, Bantayan Island</h2>
+                  </div>
+                  <p className="text-grey-0 opacity-50 text-lg">Rome, Italy</p>
+                  <span className="text-oren-0 font-bold flex text-2xl gap-2">
+                    4.8
+                    <img src={star} alt="" className="" />
+                  </span>
+                </div>
+              </div>
+              <div className="sm:w-1/3">
+                <div className="w-full">
+                  <img src={maldives} alt="" className="w-full" />
+                </div>
+                <div className="p-8 flex flex-col gap-2 rounded-b-3xl bg-white drop-shadow-xl">
+                  <div className="lg:flex">
+                    <span className="text-pink-0 font-bold text-2xl lg:order-2 lg:w-2/3 lg:text-end">$20.99</span>
+                    <h2 className="text-grey-0 font-bold text-2xl lg:order-1">Ocean with full of Colors</h2>
+                  </div>
+                  <p className="text-grey-0 opacity-50 text-lg">Maldives</p>
+                  <span className="text-oren-0 font-bold flex text-2xl gap-2">
+                    4.5
+                    <img src={star} alt="" className="" />
+                  </span>
+                </div>
+              </div>
+              <div className="sm:w-1/3">
+                <div className="w-full">
+                  <img src={uae} alt="" className="w-full" />
+                </div>
+                <div className="p-8 flex flex-col gap-2 rounded-b-3xl bg-white drop-shadow-xl">
+                  <div className="lg:flex">
+                    <span className="text-pink-0 font-bold text-2xl lg:order-2 lg:w-2/3 lg:text-end">$150.99</span>
+                    <h2 className="text-grey-0 font-bold text-2xl lg:order-1">Mountain View, Above the cloud</h2>
+                  </div>
+                  <p className="text-grey-0 opacity-50 text-lg">United Arab Emeries</p>
+                  <span className="text-oren-0 font-bold flex text-2xl gap-2">
+                    5.0
+                    <img src={star} alt="" className="" />
+                  </span>
                 </div>
               </div>
             </div>
