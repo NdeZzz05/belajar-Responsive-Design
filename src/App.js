@@ -27,6 +27,8 @@ import star from "./assets/iconTopDestination/star.svg";
 import rome from "./assets/pngTopDestination/rome.png";
 import maldives from "./assets/pngTopDestination/maldives.png";
 import uae from "./assets/pngTopDestination/uae.png";
+// png travel point
+import discounted from "./assets/pngTravelPoint/imgdiscounted.png";
 
 export const App = () => {
   const [dataToggle, setDataToggle] = useState(false);
@@ -212,7 +214,7 @@ export const App = () => {
           <div className="grid grid-cols-12 px-2">
             <div className="col-span-12 flex flex-col gap-4 lg:flex-row lg:justify-between">
               <div className="flex flex-col gap-4">
-                <span className="text-pink-0 font-bold text-center leading-tight lg:text-start lg:text-2xl">Top Destination</span>
+                <span className="text-pink-0 font-bold text-center leading-tight lg:text-start lg:text-2xl">TOP DESTINATION</span>
                 <h1 className="text-grey-0 font-bold text-3xl text-center leading-tight sm:text-[40px] lg:text-start lg:text-5xl">Explore top destination</h1>
               </div>
               <div className="flex justify-between sm:justify-center sm:gap-8">
@@ -271,6 +273,44 @@ export const App = () => {
                     5.0
                     <img src={star} alt="" className="" />
                   </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Travel Point section*/}
+      <section>
+        <div className=" mx-auto py-4 px-4 lg:pr-8 lg:pl-0 lg:py-16">
+          <div className="grid grid-cols-12 items-center px-2 lg:pr-2 lg:pl-0">
+            <div className="col-span-12 lg:col-span-8 pt-8 ">
+              <img src={discounted} alt="" className="lg:w-full" />
+            </div>
+            <div className="col-span-12 lg:col-span-4 mt-8">
+              <div className="flex flex-col gap-4 items-center lg:items-start">
+                <span className="text-pink-0 font-bold text-center leading-tight lg:text-start lg:text-2xl">TRAVEL POINT</span>
+                <h1 className="text-grey-0 font-bold text-3xl text-center leading-tight lg:text-start lg:text-[44px]">We helping you find your dream location</h1>
+                <p className="text-center text-grey-0 opacity-50 text-base pt-4 font-inter lg:text-start">
+                  Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.
+                </p>
+              </div>
+              <div className="pt-8 flex flex-col gap-4 sm:flex-row sm:grid sm:grid-cols-2">
+                <div className="border rounded-3xl p-8">
+                  <h1 className="text-oren-0 text-center text-4xl">500+</h1>
+                  <p className="font-inter text-center text-lg pt-4">Holiday Package</p>
+                </div>
+                <div className="border rounded-3xl p-8">
+                  <h1 className="text-oren-0 text-center text-4xl">100</h1>
+                  <p className="font-inter text-center text-lg pt-4">Luxury Hotel</p>
+                </div>
+                <div className="border rounded-3xl p-8">
+                  <h1 className="text-oren-0 text-center text-4xl">7</h1>
+                  <p className="font-inter text-center text-lg pt-4">Premium Airlines</p>
+                </div>
+                <div className="border rounded-3xl p-8">
+                  <h1 className="text-oren-0 text-center text-4xl">2k+</h1>
+                  <p className="font-inter text-center text-lg pt-4">Happy Customer</p>
                 </div>
               </div>
             </div>
