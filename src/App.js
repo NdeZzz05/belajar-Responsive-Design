@@ -282,7 +282,7 @@ export const App = () => {
 
       {/* Travel Point section*/}
       <section>
-        <div className=" mx-auto py-4 px-4 lg:pr-8 lg:pl-0 lg:py-16">
+        <div className="container mx-auto py-4 px-4 lg:pr-8 lg:pl-0 lg:py-16">
           <div className="grid grid-cols-12 items-center px-2 lg:pr-2 lg:pl-0">
             <div className="col-span-12 lg:col-span-8 pt-8 ">
               <img src={discounted} alt="" className="lg:w-full" />
