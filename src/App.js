@@ -29,6 +29,11 @@ import maldives from "./assets/pngTopDestination/maldives.png";
 import uae from "./assets/pngTopDestination/uae.png";
 // png travel point
 import discounted from "./assets/pngTravelPoint/imgdiscounted.png";
+// png key features
+import imagemain from "./assets/pngKeyFeatures/imageMain.png";
+import imagelocation from "./assets/pngKeyFeatures/location.png";
+import imageschedule from "./assets/pngKeyFeatures/schedule.png";
+import imagediscount from "./assets/pngKeyFeatures/discount.png";
 
 export const App = () => {
   const [dataToggle, setDataToggle] = useState(false);
@@ -119,7 +124,7 @@ export const App = () => {
       {/* Hero section */}
       <section>
         <div className="container mx-auto py-4 px-4 lg:px-8 lg:py-16 ">
-          <div className="grid grid-cols-12 items-center">
+          <div className="grid grid-cols-12 items-center px-2">
             <div className="col-span-12 lg:col-span-4 order-2 lg:order1">
               <div>
                 <button className="px-8 py-4 bg-white text-pink-0 flex gap-2 text-sm font-bold border border-[#EEEEEE] rounded-full mx-auto drop-shadow-sm-shadow lg:mx-0">
@@ -311,6 +316,49 @@ export const App = () => {
                 <div className="border rounded-3xl p-8">
                   <h1 className="text-oren-0 text-center text-4xl">2k+</h1>
                   <p className="font-inter text-center text-lg pt-4">Happy Customer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Features section */}
+      <section>
+        <div className="container mx-auto py-4 px-4 lg:py-16 lg:pl-8 lg:pr-0">
+          <div className="grid grid-cols-12 items-center px-2 lg:pr-0">
+            <div className="col-span-12 pt-8 lg:col-span-6 lg:order-2 lg:pt-0 lg:pl-8">
+              <img src={imagemain} alt="" className="w-full " />
+            </div>
+            <div className="col-span-12 pt-8 lg:col-span-6 lg:pt-0">
+              <div className="flex flex-col gap-4 items-center lg:items-start">
+                <span className="text-pink-0 font-bold text-center leading-tight lg:text-2xl">KEY FEATURES</span>
+                <h1 className="text-grey-0 font-bold text-3xl text-center leading-tight lg:text-[44px]">We offer best services</h1>
+                <p className="text-center text-grey-0 opacity-50 text-base pt-4 font-inter lg:text-start lg:text-lg">
+                  Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.
+                </p>
+              </div>
+              <div className="grid gap-2 pt-8">
+                <div className="p-8 flex flex-col gap-8 sm:flex-row sm:items-center">
+                  <img src={imagelocation} alt="" className="w-1/3 sm:w-20" />
+                  <div className="flex flex-col gap-2">
+                    <h2 className="text-grey-0 font-bold text-lg text-start">We offer best services</h2>
+                    <p className="font-inter text-lg leading-relaxed text-grey-0 opacity-50 text-start">Lorem Ipsum is not simply random text</p>
+                  </div>
+                </div>
+                <div className="p-8 flex flex-col gap-8 border rounded-3xl sm:flex-row sm:items-center">
+                  <img src={imageschedule} alt="" className="w-1/3 sm:w-20" />
+                  <div className="flex flex-col gap-2">
+                    <h2 className="text-grey-0 font-bold text-lg text-start">Schedule your trip</h2>
+                    <p className="font-inter text-lg leading-relaxed text-grey-0 opacity-50 text-start">It has roots in a piece of classical</p>
+                  </div>
+                </div>
+                <div className="p-8 flex flex-col gap-8 sm:flex-row sm:items-center">
+                  <img src={imagediscount} alt="" className="w-1/3 sm:w-20" />
+                  <div className="flex flex-col gap-2">
+                    <h2 className="text-grey-0 font-bold text-lg text-start">Get discounted coupons</h2>
+                    <p className="font-inter text-lg leading-relaxed text-grey-0 opacity-50 text-start">Lorem Ipsum is not simply random text</p>
+                  </div>
                 </div>
               </div>
             </div>
