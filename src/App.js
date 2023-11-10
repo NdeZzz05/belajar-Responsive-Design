@@ -34,6 +34,10 @@ import imagemain from "./assets/pngKeyFeatures/imageMain.png";
 import imagelocation from "./assets/pngKeyFeatures/location.png";
 import imageschedule from "./assets/pngKeyFeatures/schedule.png";
 import imagediscount from "./assets/pngKeyFeatures/discount.png";
+// png testimonials
+import iconwomen from "./assets/pngTestimonials/iconWomen.png";
+import starfive from "./assets/pngTestimonials/starFive.png";
+import indicator from "./assets/pngTestimonials/indicator.png";
 
 export const App = () => {
   const [dataToggle, setDataToggle] = useState(false);
@@ -340,26 +344,75 @@ export const App = () => {
               </div>
               <div className="grid gap-2 pt-8">
                 <div className="p-8 flex flex-col gap-8 sm:flex-row sm:items-center">
-                  <img src={imagelocation} alt="" className="w-1/3 sm:w-20" />
+                  <img src={imagelocation} alt="" className="w-1/4 sm:w-20" />
                   <div className="flex flex-col gap-2">
                     <h2 className="text-grey-0 font-bold text-lg text-start">We offer best services</h2>
                     <p className="font-inter text-lg leading-relaxed text-grey-0 opacity-50 text-start">Lorem Ipsum is not simply random text</p>
                   </div>
                 </div>
                 <div className="p-8 flex flex-col gap-8 border rounded-3xl sm:flex-row sm:items-center">
-                  <img src={imageschedule} alt="" className="w-1/3 sm:w-20" />
+                  <img src={imageschedule} alt="" className="w-1/4 sm:w-20" />
                   <div className="flex flex-col gap-2">
                     <h2 className="text-grey-0 font-bold text-lg text-start">Schedule your trip</h2>
                     <p className="font-inter text-lg leading-relaxed text-grey-0 opacity-50 text-start">It has roots in a piece of classical</p>
                   </div>
                 </div>
                 <div className="p-8 flex flex-col gap-8 sm:flex-row sm:items-center">
-                  <img src={imagediscount} alt="" className="w-1/3 sm:w-20" />
+                  <img src={imagediscount} alt="" className="w-1/4 sm:w-20" />
                   <div className="flex flex-col gap-2">
                     <h2 className="text-grey-0 font-bold text-lg text-start">Get discounted coupons</h2>
                     <p className="font-inter text-lg leading-relaxed text-grey-0 opacity-50 text-start">Lorem Ipsum is not simply random text</p>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials section */}
+      <section>
+        <div className="container mx-auto py-4 px-4 lg:px-8 lg:py-16">
+          <div className="grid grid-cols-12 items-center px-2 py-8">
+            <div className="hidden sm:block lg:block">
+              <button className="border rounded-full p-6 lg:p-9">
+                <img src={previous} alt="" className="w-6" />
+              </button>
+            </div>
+            <div className="col-span-12 flex flex-col sm:col-span-10 items-center sm:px-8">
+              <div className=" flex flex-col sm:gap-4">
+                <span className="text-pink-0 font-bold text-center leading-tight sm:text-2xl">TESTIMONIALS</span>
+                <h1 className="text-grey-0 font-bold text-3xl text-center leading-tight sm:text-[40px]">Trust our clients</h1>
+              </div>
+              <div className="pt-8 lg:pt-16">
+                <img src={iconwomen} alt="" />
+              </div>
+              <div className=" pt-8 lg:pt-16 flex flex-col items-center gap-2 sm:gap-4">
+                <h2 className="text-grey-0 font-bold text-lg sm:text-2xl">
+                  <span className="text-oren-0">Mark Smith</span> / Travel Enthusiast
+                </h2>
+                <img src={starfive} alt="" className="w-3/4 sm:w-1/2" />
+              </div>
+              <div className=" pt-8 lg:pt-16">
+                <p className="font-inter text-base text-grey-0 text-center sm:text-lg lg:text-xl">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.</p>
+              </div>
+              <div className="flex flex-col items-center pt-8 lg:pt-16">
+                <img src={indicator} alt="" className="w-3/4" />
+              </div>
+            </div>
+            <div className="hidden sm:block">
+              <button className="border rounded-full p-6 bg-ungu-0 lg:p-9">
+                <img src={next} alt="" className="w-6" />
+              </button>
+            </div>
+            <div className="col-span-12 pt-8 lg:pt-16 sm:hidden">
+              <div className="flex justify-between sm:justify-center sm:gap-8">
+                <button className="border rounded-full p-6">
+                  <img src={previous} alt="" />
+                </button>
+                <button className="border rounded-full p-6 bg-ungu-0">
+                  <img src={next} alt="" />
+                </button>
               </div>
             </div>
           </div>
