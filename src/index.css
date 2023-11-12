@@ -8,9 +8,9 @@
     src: url("../public/CircularStd-Bold.woff") format("woff");
   }
   html {
-    font-family: "inter";
+    font-family: Circular STD;
   }
-  h1 {
-    font-family: "Circular STD";
+  p {
+    font-family: inter;
   }
 }

@@ -38,6 +38,7 @@ import imagediscount from "./assets/pngKeyFeatures/discount.png";
 import iconwomen from "./assets/pngTestimonials/iconWomen.png";
 import starfive from "./assets/pngTestimonials/starFive.png";
 import indicator from "./assets/pngTestimonials/indicator.png";
+import imageemail from "./assets/pngSubscribe/email.png";
 
 export const App = () => {
   const [dataToggle, setDataToggle] = useState(false);
@@ -80,7 +81,7 @@ export const App = () => {
           </div>
         </div>
         {dataLogo ? (
-          <div className="fixed bottom-0 w-full right-0 left-0 p-2 bg-white border lg:hidden z-50">
+          <div className="fixed bottom-0 w-full right-0 left-0 p-2 bg-white border lg:hidden z-50 sm:px-16">
             <ul className="flex justify-between">
               <li>
                 <button className="flex justify-center  items-center flex-col gap-1">
@@ -414,6 +415,25 @@ export const App = () => {
                   <img src={next} alt="" />
                 </button>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SUBSCRIBE section */}
+      <section>
+        <div className="container mx-auto py-4 px-6 lg:px-8 lg:py-16 ">
+          <div className=" bg-[#FACD49] rounded-3xl bg-opacity-20 flex flex-col justify-center gap-16 py-16 px-8 sm:py-32 sm:px-16">
+            <div className="flex flex-col justify-center items-center gap-4 sm:gap-8">
+              <span className="text-pink-0 font-bold text-center leading-tight lg:text-2xl">SUBSCRIBE TO OUR NEWSLETTER</span>
+              <h1 className="text-grey-0 font-bold text-3xl text-center leading-tight lg:text-[55px]">Prepare yourself & let’s explore the beauty of the world</h1>
+            </div>
+            <div className="flex flex-col justify-center items-center gap-8 sm:flex-row">
+              <div className="relative w-full sm:w-2/3">
+                <input placeholder="your email" className="pl-14 pr-4 py-6 rounded-2xl sm:pr-8 sm:pl-20 w-full lg:py-8 lg:text-2xl" />
+                <img src={imageemail} alt="" className="absolute left-4 sm:left-7 top-1/2 transform -translate-y-1/2" />
+              </div>
+              <button className="bg-ungu-0 mx-auto py-6 text-white rounded-2xl sm:px-12 w-full sm:w-1/3 lg:py-8 lg:text-2xl">Subscribe</button>
             </div>
           </div>
         </div>
