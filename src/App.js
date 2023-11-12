@@ -39,6 +39,11 @@ import iconwomen from "./assets/pngTestimonials/iconWomen.png";
 import starfive from "./assets/pngTestimonials/starFive.png";
 import indicator from "./assets/pngTestimonials/indicator.png";
 import imageemail from "./assets/pngSubscribe/email.png";
+// png footer
+import facebook from "./assets/footer/facebook.svg";
+import twitter from "./assets/footer/twitter.svg";
+import instagram from "./assets/footer/instagram.svg";
+import icondropdown from "./assets/footer/dropdown.svg";
 
 export const App = () => {
   const [dataToggle, setDataToggle] = useState(false);
@@ -53,7 +58,7 @@ export const App = () => {
   return (
     <>
       {/* Navigation bar */}
-      <nav className="py-4 px-4 lg:px-8">
+      <nav className="py-4 px-4 lg:px-12">
         <div className="container mx-auto">
           <div className="flex justify-between items-center">
             <img src={logo} alt="" className="order-1 sm:order-2" />
@@ -128,7 +133,7 @@ export const App = () => {
 
       {/* Hero section */}
       <section>
-        <div className="container mx-auto py-4 px-4 lg:px-8 lg:py-16 ">
+        <div className="container mx-auto py-4 px-4 lg:px-12 lg:py-16 ">
           <div className="grid grid-cols-12 items-center px-2">
             <div className="col-span-12 lg:col-span-4 order-2 lg:order1">
               <div>
@@ -179,7 +184,7 @@ export const App = () => {
 
       {/* Sercive section */}
       <section>
-        <div className="container mx-auto py-4 px-4 lg:px-8 lg:py-16 overflow-x-hidden ">
+        <div className="container mx-auto py-4 px-4 lg:px-12 lg:py-16 overflow-x-hidden ">
           <div className="grid grid-cols-12 items-center px-2">
             <div className="lg:col-span-4 col-span-12 flex flex-col gap-4 lg:pr-2">
               <span className="text-pink-0 font-bold leading-tight text-center lg:text-start text-base sm:text-2xl">SERVICES</span>
@@ -220,7 +225,7 @@ export const App = () => {
 
       {/* Top Destination section */}
       <section>
-        <div className="container mx-auto py-4 px-4 lg:px-8 lg:py-16 sm:pt-8">
+        <div className="container mx-auto py-4 px-4 lg:px-12 lg:py-16 sm:pt-8">
           <div className="grid grid-cols-12 px-2">
             <div className="col-span-12 flex flex-col gap-4 lg:flex-row lg:justify-between">
               <div className="flex flex-col gap-4">
@@ -292,7 +297,7 @@ export const App = () => {
 
       {/* Travel Point section*/}
       <section>
-        <div className="container mx-auto py-4 px-4 lg:pr-8 lg:pl-0 lg:py-16">
+        <div className="container mx-auto py-4 px-4 lg:pr-12 lg:pl-0 lg:py-16">
           <div className="grid grid-cols-12 items-center px-2 lg:pr-2 lg:pl-0">
             <div className="col-span-12 lg:col-span-8 pt-8 ">
               <img src={discounted} alt="" className="lg:w-full" />
@@ -330,7 +335,7 @@ export const App = () => {
 
       {/* Key Features section */}
       <section>
-        <div className="container mx-auto py-4 px-4 lg:py-16 lg:pl-8 lg:pr-0">
+        <div className="container mx-auto py-4 px-4 lg:py-16 lg:pl-12 lg:pr-0">
           <div className="grid grid-cols-12 items-center px-2 lg:pr-0">
             <div className="col-span-12 pt-8 lg:col-span-6 lg:order-2 lg:pt-0 lg:pl-8">
               <img src={imagemain} alt="" className="w-full " />
@@ -373,7 +378,7 @@ export const App = () => {
 
       {/* Testimonials section */}
       <section>
-        <div className="container mx-auto py-4 px-4 lg:px-8 lg:py-16">
+        <div className="container mx-auto py-4 px-4 lg:px-12 lg:py-16">
           <div className="grid grid-cols-12 items-center px-2 py-8">
             <div className="hidden sm:block lg:block">
               <button className="border rounded-full p-6 lg:p-9">
@@ -422,7 +427,7 @@ export const App = () => {
 
       {/* SUBSCRIBE section */}
       <section>
-        <div className="container mx-auto py-4 px-6 lg:px-8 lg:py-16 ">
+        <div className="container mx-auto py-4 px-6 lg:px-12 lg:py-16 ">
           <div className=" bg-[#FACD49] rounded-3xl bg-opacity-20 flex flex-col justify-center gap-16 py-16 px-8 sm:py-32 sm:px-16">
             <div className="flex flex-col justify-center items-center gap-4 sm:gap-8">
               <span className="text-pink-0 font-bold text-center leading-tight lg:text-2xl">SUBSCRIBE TO OUR NEWSLETTER</span>
@@ -434,6 +439,53 @@ export const App = () => {
                 <img src={imageemail} alt="" className="absolute left-4 sm:left-7 top-1/2 transform -translate-y-1/2" />
               </div>
               <button className="bg-ungu-0 mx-auto py-6 text-white rounded-2xl sm:px-12 w-full sm:w-1/3 lg:py-8 lg:text-2xl">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer section */}
+      <section>
+        <div className="container mx-auto pt-6 pb-8 px-10 lg:px-12 lg:py-16">
+          <div className="flex flex-col gap-16">
+            <div className="flex flex-col gap-8">
+              <img src={logo} alt="" className="w-1/2 sm:w-1/4 lg:w-1/6" />
+              <p className="text-grey-0 opacity-50 text-base text-start sm:text-xl">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.</p>
+              <div className="flex gap-4">
+                <img src={facebook} alt="" />
+                <img src={twitter} alt="" />
+                <img src={instagram} alt="" />
+              </div>
+            </div>
+            <div className="flex flex-col gap-8 sm:flex-row">
+              <div className="flex justify-between sm:w-1/3 sm:flex-col sm:justify-normal sm:gap-8">
+                <h2 className="text-grey-0 font-bold text-lg sm:text-2xl">Company</h2>
+                <img src={icondropdown} alt="" className="sm:hidden" />
+                <div className="hidden sm:flex sm:flex-col sm:gap-8">
+                  <p className="text-grey-0 opacity-50 text-base sm:text-[18px]">About</p>
+                  <p className="text-grey-0 opacity-50 text-base sm:text-[18px]">Career</p>
+                  <p className="text-grey-0 opacity-50 text-base sm:text-[18px]">Mobile</p>
+                </div>
+              </div>
+              <div className="flex justify-between sm:w-1/3 sm:flex-col sm:justify-normal sm:gap-8">
+                <h2 className="text-grey-0 font-bold text-lg">Contact Us</h2>
+                <img src={icondropdown} alt="" className="sm:hidden" />
+                <div className="hidden sm:flex sm:flex-col sm:gap-8">
+                  <p className="text-grey-0 opacity-50 text-base sm:text-[18px]">Why Travlog?</p>
+                  <p className="text-grey-0 opacity-50 text-base sm:text-[18px]">Partner with us</p>
+                  <p className="text-grey-0 opacity-50 text-base sm:text-[18px]">FAQ’s</p>
+                  <p className="text-grey-0 opacity-50 text-base sm:text-[18px]">Blog</p>
+                </div>
+              </div>
+              <div className="flex justify-between sm:w-1/3 sm:flex-col sm:justify-normal sm:gap-8">
+                <h2 className="text-grey-0 font-bold text-lg">Meet Us</h2>
+                <img src={icondropdown} alt="" className="sm:hidden" />
+                <div className="hidden sm:flex sm:flex-col sm:gap-8">
+                  <p className="text-grey-0 opacity-50 text-base sm:text-[18px]">+00 92 1234 56789</p>
+                  <p className="text-grey-0 opacity-50 text-base sm:text-[18px]">info@travlog.com</p>
+                  <p className="text-grey-0 opacity-50 text-base sm:text-[18px]">205. R Street, New York BD23200</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
