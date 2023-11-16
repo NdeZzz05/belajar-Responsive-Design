@@ -491,9 +491,9 @@ export const App = () => {
                   <p className="text-grey-0 opacity-50 text-base sm:text-[18px]">Mobile</p>
                 </div>
               </div>
-              <div className="flex flex-col sm:w-1/3 sm:flex-col sm:justify-normal sm:gap-8">
+              <div className="flex flex-col gap-4 sm:w-1/3 sm:flex-col sm:justify-normal sm:gap-8">
                 <div className="flex justify-between">
-                  <h2 className="text-grey-0 font-bold text-lg">Contact Us</h2>
+                  <h2 className="text-grey-0 font-bold text-lg sm:text-2xl">Contact Us</h2>
                   <img src={icondropdown} alt="" className={`sm:hidden ${activeDropDown === "contact" ? "rotate-180" : "rotate-0"}`} onClick={() => handleItemDropDown("contact")} />
                 </div>
                 <div className={`flex flex-col gap-2 sm:flex sm:flex-col sm:gap-8 ${activeDropDown === "contact" ? "block" : "hidden"} `}>
@@ -503,9 +503,9 @@ export const App = () => {
                   <p className="text-grey-0 opacity-50 text-base sm:text-[18px]">Blog</p>
                 </div>
               </div>
-              <div className="flex flex-col sm:w-1/3 sm:flex-col sm:justify-normal sm:gap-8">
+              <div className="flex flex-col gap-4 sm:w-1/3 sm:flex-col sm:justify-normal sm:gap-8">
                 <div className="flex justify-between">
-                  <h2 className="text-grey-0 font-bold text-lg">Meet Us</h2>
+                  <h2 className="text-grey-0 font-bold text-lg sm:text-2xl">Meet Us</h2>
                   <img src={icondropdown} alt="" className={`sm:hidden ${activeDropDown === "meet" ? "rotate-180" : "rotate-0"}`} onClick={() => handleItemDropDown("meet")} />
                 </div>
                 <div className={`flex flex-col gap-2 sm:flex sm:flex-col sm:gap-8 ${activeDropDown === "meet" ? "block" : "hidden"} `}>
