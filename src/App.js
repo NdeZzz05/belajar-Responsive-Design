@@ -48,8 +48,22 @@ import icondropdown from "./assets/footer/dropdown.svg";
 export const App = () => {
   const [dataToggle, setDataToggle] = useState(false);
   const [dataLogo, setDataLogo] = useState(false);
-  const handleMore = () => {
-    setDataToggle(!dataToggle);
+  const [activeItem, setActiveItem] = useState("home");
+  const [activeMobile, setActiveMobile] = useState("home");
+  const [activeDropDown, setActiveDropDown] = useState("");
+
+  const handleItemClick = (item) => {
+    setActiveItem(item);
+  };
+  const handleItemMobile = (item) => {
+    setActiveMobile(item);
+    if (item === "more") {
+      setActiveMobile(item);
+      setDataToggle(!dataToggle);
+    }
+  };
+  const handleItemDropDown = (item) => {
+    setActiveDropDown(activeDropDown === item ? "" : item);
   };
   const handleLogo = () => {
     setDataLogo(!dataLogo);
@@ -65,23 +79,31 @@ export const App = () => {
             <img src={toggle} alt="" onClick={handleLogo} className="cursor-pointer order-2 sm:order-1 lg:hidden" />
             <div className="lg:block lg:order-2 sm:hidden hidden">
               <ul className="flex gap-16">
-                <li className="text-grey-0 font-bold text-sm font-circular">
-                  <a href="#home">Home</a>
+                <li className={`text-grey-0 font-bold text-sm font-circular ${activeItem === "home" ? "opacity-100" : "opacity-50"}`}>
+                  <a href="#home" onClick={() => handleItemClick("home")}>
+                    Home
+                  </a>
                 </li>
-                <li className="text-grey-0 font-bold text-sm font-circular opacity-50 ">
-                  <a href="#discover">Discover</a>
+                <li className={`text-grey-0 font-bold text-sm font-circular ${activeItem === "discover" ? "opacity-100" : "opacity-50"}`}>
+                  <a href="#discover" onClick={() => handleItemClick("discover")}>
+                    Discover
+                  </a>
                 </li>
-                <li className="text-grey-0 font-bold text-sm font-circular opacity-50">
-                  <a href="#specialDeals">Special Deals</a>
+                <li className={`text-grey-0 font-bold text-sm font-circular ${activeItem === "specialDeals" ? "opacity-100" : "opacity-50"}`}>
+                  <a href="#specialDeals" onClick={() => handleItemClick("specialDeals")}>
+                    Special Deals
+                  </a>
                 </li>
-                <li className="text-grey-0 font-bold text-sm font-circular opacity-50">
-                  <a href="#contact">Contact</a>
+                <li className={`text-grey-0 font-bold text-sm font-circular ${activeItem === "contact" ? "opacity-100" : "opacity-50"}`}>
+                  <a href="#contact" onClick={() => handleItemClick("contact")}>
+                    Contact
+                  </a>
                 </li>
               </ul>
             </div>
             <div className="order-3 hidden sm:block">
               <button className="grow bg-white py-4 px-8 font-bold text-grey-0 rounded-full text-sm border">Login</button>
-              <button className="grow bg-ungu-0 py-4 px-8 font-bold text-white rounded-full text-sm">SignUp</button>
+              <button className="grow bg-ungu-0 py-4 px-8 font-bold text-white rounded-full text-sm hover:bg-purple-700">SignUp</button>
             </div>
           </div>
         </div>
@@ -89,33 +111,33 @@ export const App = () => {
           <div className="fixed bottom-0 w-full right-0 left-0 p-2 bg-white border lg:hidden z-50 sm:px-16">
             <ul className="flex justify-between">
               <li>
-                <button className="flex justify-center  items-center flex-col gap-1">
-                  <img src={home} alt="" className="w-6 text-ungu-0" />
-                  <span className="text-base font-bold text-ungu-0">Home</span>
+                <button className="flex justify-center  items-center flex-col gap-1" onClick={() => handleItemMobile("home")}>
+                  <img src={home} alt="" className={`w-6 ${activeMobile === "home" ? "opacity-100 text-ungu-0" : "text-grey-0 opacity-50 "}`} />
+                  <span className={`text-base font-normal ${activeMobile === "home" ? "opacity-100 text-ungu-0" : "text-grey-0 opacity-50 "}`}>Home</span>
                 </button>
               </li>
               <li>
-                <button className="flex justify-center items-center flex-col gap-1">
-                  <img src={discover} alt="" className="w-6 text-grey-0 opacity-50" />
-                  <span className="text-base font-normal text-grey-0 opacity-50">Discover</span>
+                <button className="flex justify-center items-center flex-col gap-1" onClick={() => handleItemMobile("discover")}>
+                  <img src={discover} alt="" className={`w-6 ${activeMobile === "discover" ? "opacity-100 text-ungu-0" : "text-grey-0 opacity-50 "}`} />
+                  <span className={`text-base font-normal ${activeMobile === "discover" ? "opacity-100 text-ungu-0" : "text-grey-0 opacity-50 "}`}>Discover</span>
                 </button>
               </li>
               <li>
-                <button className="flex justify-center items-center flex-col gap-1">
-                  <img src={special} alt="" className="w-6 text-grey-0 opacity-50" />
-                  <span className="text-base font-normal text-grey-0 opacity-50">Special</span>
+                <button className="flex justify-center items-center flex-col gap-1" onClick={() => handleItemMobile("special")}>
+                  <img src={special} alt="" className={`w-6 ${activeMobile === "special" ? "opacity-100 text-ungu-0" : "text-grey-0 opacity-50 "}`} />
+                  <span className={`text-base font-normal ${activeMobile === "special" ? "opacity-100 text-ungu-0" : "text-grey-0 opacity-50 "}`}>Special</span>
                 </button>
               </li>
               <li>
-                <button className="flex justify-center items-center flex-col gap-1">
-                  <img src={contact} alt="" className="w-6 text-grey-0 opacity-50" />
-                  <span className="text-base font-normal text-grey-0 opacity-50">Contact</span>
+                <button className="flex justify-center items-center flex-col gap-1" onClick={() => handleItemMobile("contact")}>
+                  <img src={contact} alt="" className={`w-6 ${activeMobile === "contact" ? "opacity-100 text-ungu-0" : "text-grey-0 opacity-50 "}`} />
+                  <span className={`text-base font-normal ${activeMobile === "contact" ? "opacity-100 text-ungu-0" : "text-grey-0 opacity-50 "}`}>Contact</span>
                 </button>
               </li>
               <li className="sm:hidden">
-                <button onClick={handleMore} className="flex justify-center items-center flex-col gap-1">
-                  <img src={more} alt="" className="w-6 text-grey-0 opacity-50" />
-                  <span className="text-base font-normal text-grey-0 opacity-50">More</span>
+                <button onClick={() => handleItemMobile("more")} className="flex justify-center items-center flex-col gap-1">
+                  <img src={more} alt="" className={`w-6 ${activeMobile === "more" ? "opacity-100 text-ungu-0" : "text-grey-0 opacity-50 "}`} />
+                  <span className={`text-base font-normal ${activeMobile === "more" ? "opacity-100 text-ungu-0" : "text-grey-0 opacity-50 "}`}>More</span>
                 </button>
               </li>
             </ul>
@@ -458,29 +480,35 @@ export const App = () => {
               </div>
             </div>
             <div className="flex flex-col gap-8 sm:flex-row">
-              <div className="flex justify-between sm:w-1/3 sm:flex-col sm:justify-normal sm:gap-8">
-                <h2 className="text-grey-0 font-bold text-lg sm:text-2xl">Company</h2>
-                <img src={icondropdown} alt="" className="sm:hidden" />
-                <div className="hidden sm:flex sm:flex-col sm:gap-8">
+              <div className="flex flex-col gap-4 sm:w-1/3 sm:flex-col sm:justify-normal sm:gap-8">
+                <div className="flex justify-between">
+                  <h2 className="text-grey-0 font-bold text-lg sm:text-2xl">Company</h2>
+                  <img src={icondropdown} alt="" className={`sm:hidden ${activeDropDown === "company" ? "rotate-180" : "rotate-0"}`} onClick={() => handleItemDropDown("company")} />
+                </div>
+                <div className={`flex flex-col gap-2 sm:flex sm:flex-col sm:gap-8 ${activeDropDown === "company" ? "block" : "hidden"} `}>
                   <p className="text-grey-0 opacity-50 text-base sm:text-[18px]">About</p>
                   <p className="text-grey-0 opacity-50 text-base sm:text-[18px]">Career</p>
                   <p className="text-grey-0 opacity-50 text-base sm:text-[18px]">Mobile</p>
                 </div>
               </div>
-              <div className="flex justify-between sm:w-1/3 sm:flex-col sm:justify-normal sm:gap-8">
-                <h2 className="text-grey-0 font-bold text-lg">Contact Us</h2>
-                <img src={icondropdown} alt="" className="sm:hidden" />
-                <div className="hidden sm:flex sm:flex-col sm:gap-8">
+              <div className="flex flex-col sm:w-1/3 sm:flex-col sm:justify-normal sm:gap-8">
+                <div className="flex justify-between">
+                  <h2 className="text-grey-0 font-bold text-lg">Contact Us</h2>
+                  <img src={icondropdown} alt="" className={`sm:hidden ${activeDropDown === "contact" ? "rotate-180" : "rotate-0"}`} onClick={() => handleItemDropDown("contact")} />
+                </div>
+                <div className={`flex flex-col gap-2 sm:flex sm:flex-col sm:gap-8 ${activeDropDown === "contact" ? "block" : "hidden"} `}>
                   <p className="text-grey-0 opacity-50 text-base sm:text-[18px]">Why Travlog?</p>
                   <p className="text-grey-0 opacity-50 text-base sm:text-[18px]">Partner with us</p>
                   <p className="text-grey-0 opacity-50 text-base sm:text-[18px]">FAQ’s</p>
                   <p className="text-grey-0 opacity-50 text-base sm:text-[18px]">Blog</p>
                 </div>
               </div>
-              <div className="flex justify-between sm:w-1/3 sm:flex-col sm:justify-normal sm:gap-8">
-                <h2 className="text-grey-0 font-bold text-lg">Meet Us</h2>
-                <img src={icondropdown} alt="" className="sm:hidden" />
-                <div className="hidden sm:flex sm:flex-col sm:gap-8">
+              <div className="flex flex-col sm:w-1/3 sm:flex-col sm:justify-normal sm:gap-8">
+                <div className="flex justify-between">
+                  <h2 className="text-grey-0 font-bold text-lg">Meet Us</h2>
+                  <img src={icondropdown} alt="" className={`sm:hidden ${activeDropDown === "meet" ? "rotate-180" : "rotate-0"}`} onClick={() => handleItemDropDown("meet")} />
+                </div>
+                <div className={`flex flex-col gap-2 sm:flex sm:flex-col sm:gap-8 ${activeDropDown === "meet" ? "block" : "hidden"} `}>
                   <p className="text-grey-0 opacity-50 text-base sm:text-[18px]">+00 92 1234 56789</p>
                   <p className="text-grey-0 opacity-50 text-base sm:text-[18px]">info@travlog.com</p>
                   <p className="text-grey-0 opacity-50 text-base sm:text-[18px]">205. R Street, New York BD23200</p>
